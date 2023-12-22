@@ -1,0 +1,537 @@
+<html lang="en">
+
+	<head>
+{% load static %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<title>Shop List - Medicia</title>
+		<link rel="shortcut icon" href="assets/images/logo/favourite_icon_1.png">
+
+		<!-- css include -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/line-awesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}">
+
+		<!-- custom - css include -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+	</head>
+
+
+	<body>
+
+
+		<!-- backtotop - start -->
+		<div id="thetop"></div>
+		<div id="backtotop">
+			<a href="#" id="scroll">
+				<i class="las la-arrow-up"></i>
+			</a>
+		</div>
+		<!-- backtotop - end -->
+
+		<!-- preloader - start -->
+		<!-- <div id="preloader"></div> -->
+		<!-- preloader - end -->
+
+
+		<!-- header-section - start
+		================================================== -->
+		<header id="header-section" class="header-section clearfix">
+			<div class="header-top bg-white d-flex align-items-center clearfix">
+				<div class="container">
+					<div class="row align-items-center">
+
+						<div class="col-lg-6">
+							<div class="info-list ul-li clearfix">
+								<ul class="clearfix">
+									<li><i class="las la-map-marked-alt mr-1"></i> UIC CSHW_Medicia</li>
+									<li><i class="las la-envelope-open-text mr-1"></i> support@uic.edu.com</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="info-list ul-li-right clearfix">
+								<ul class="clearfix">
+{#									<li><a href="#!"><span class="mr-1">Htoline:</span> 5</a></li>#}
+									<li>
+										<div class="dropdown select-option">
+											<button class="dropdown-toggle" type="button" id="language-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												English
+											</button>
+											<div aria-labelledby="language-select" class="dropdown-menu ul-li-block clearfix">
+{#												<ul class="clearfix">#}
+{#													<li><a href="#!">Franch</a></li>#}
+{#													<li><a href="#!">Bangla</a></li>#}
+{#													<li><a href="#!">Spanish</a></li>#}
+{#												</ul>#}
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="header-middle bg-gray d-flex align-items-center clearfix">
+				<div class="container">
+					<div class="row align-items-center">
+
+						<div class="col-lg-3 col-md-12">
+							<div class="brand-logo clearfix">
+								<a href="index.html" class="brand-link">
+									<img src="{% static 'logo_1.jpeg' %}" alt="logo_not_found">
+								</a>
+
+								<div class="btns-group ul-li-right clearfix">
+									<ul class="clearfix">
+										<li>
+											<button type="button" class="mobile-menu-btn">
+												<i class="las la-bars"></i>
+											</button>
+										</li>
+										<li>
+{#											<button class="mobile-btn-cart">#}
+{#												<i class="las la-shopping-bag"></i>#}
+{#												<small class="cart-counter bg-royal-blue">03</small>#}
+{#											</button>#}
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-9 col-md-12">
+							<div class="btns-group ul-li-right clearfix">
+								<ul class="clearfix">
+									<li>
+{#										<form action="#">#}
+{#											<div class="form-item">#}
+{#												<input type="search" name="search" placeholder="Search your Products">#}
+{#												<button type="submit"><i class="la la-search"></i></button>#}
+{#											</div>#}
+{#										</form>#}
+									</li>
+									<li class="dropdown">
+										<button type="button" class="btn-user" id="user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="lar la-user"></i>
+										</button>
+										<div aria-labelledby="user-dropdown" class="user-dropdown dropdown-menu ul-li-block clearfix">
+											<div class="profile-info clearfix">
+												<a href="#!" class="user-thumbnail">
+													<img src="static/picture/img_2.png" alt="thumbnail_not_found">
+												</a>
+{#												<div class="user-content">#}
+{#													<h4 class="user-name"><a href="#!">Rakibul Hassan</a></h4>#}
+{#													<span class="user-title">Apothecary</span>#}
+{#												</div>#}
+											</div>
+											<ul class="clearfix">
+{#												<li><a href="#!"><i class="las la-user-circle"></i> Profile</a></li>#}
+{#												<li><a href="#!"><i class="las la-user-cog"></i> Settings</a></li>#}
+												<li><a href="{% url 'LoginPage' %}"><i class="las la-sign-out-alt"></i> Logout</a></li>
+											</ul>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="header-bottom d-flex align-items-center clearfix">
+				<div class="container">
+					<div class="row align-items-center">
+
+						<div class="col-lg-2">
+							<div class="all-categories clearfix">
+								<button type="button" class="category-btn" data-toggle="collapse" data-target="#categories-collapse" aria-expanded="false" aria-controls="categories-collapse">
+									<i class="las la-bars"></i>
+									All Categories
+								</button>
+
+								<div id="categories-collapse" class="categories-collapse collapse">
+									<div class="card card-body ul-li-block">
+										<ul class="clearfix">
+											<li><a href="#!"><span><i class="las la-microscope"></i></span> Family Standing</a></li>
+											<li><a href="#!"><span><i class="las la-capsules"></i></span> Dermatologic</a></li>
+											<li><a href="#!"><span><i class="las la-dna"></i></span> Intestines And Stomach Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-first-aid"></i></span> Respiratiry Drugn</a></li>
+											<li><a href="#!"><span><i class="las la-stethoscope"></i></span> Taurus Medicinemn</a></li>
+											<li><a href="#!"><span><i class="las la-syringe"></i></span> Men Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-brain"></i></span> Gynaecology Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-x-ray"></i></span> Children's Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-thermometer"></i></span> Nutritional Medicinumn</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Cardio-cerebrovascular Medicinen</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Hepatobiliary And Pancreatic Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span>Renal Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Endocrine Medicineen</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Nerve Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Tumor Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Rheumatism Immunomedication</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Blood Diseases Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Anti-tuberculosis And Leprosy Medicine</a></li>
+											<li><a href="#!"><span><i class="las la-user-nurse"></i></span> Venereal Disease Medicine</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-8">
+							<nav class="main-menu ul-li-center clearfix">
+								<ul class="clearfix">
+									<li class="menu-item-has-child">
+										<a href="{% url 'Yishi' %}">Home</a>
+									</li>
+										<li class="menu-item-has-child active"><a href="{% url 'AppointmentInfo' 1 %}">Appointment Information</a></li>
+										<li class="menu-item-has-child"><a href="{% url 'Announcement' %}">Announcement</a></li>
+
+								</ul>
+							</nav>
+
+						</div>
+
+						<div class="col-lg-2">
+							<div class="social-icon ul-li-right clearfix">
+								<ul class="clearfix">
+									<li><a href="#!"><i class="lab la-facebook"></i></a></li>
+									<li><a href="#!"><i class="lab la-twitter"></i></a></li>
+									<li><a href="#!"><i class="lab la-instagram"></i></a></li>
+									<li><a href="#!"><i class="lab la-pinterest-p"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- sidebar mobile menu - start -->
+		<div class="sidebar-menu-wrapper">
+			<div id="sidebar-menu" class="sidebar-menu">
+
+				<span class="close-btn">
+					<i class="las la-times"></i>
+				</span>
+
+				<div class="brand-logo text-center clearfix">
+					<a href="index.html" class="brand-link">
+						<img src="static/picture/logo_3.png" alt="logo_not_found">
+					</a>
+				</div>
+
+				<div class="search-wrap">
+{#					<form action="#!">#}
+{#						<div class="form-item mb-0">#}
+{#							<input type="search" name="search" placeholder="Search your Products">#}
+{#							<button type="submit"><i class="la la-search"></i></button>#}
+{#						</div>#}
+{#					</form>#}
+				</div>
+
+					</div>
+
+				</div>
+
+
+
+	<main>
+	
+	<section id="breadcrumb-section" class="breadcrumb-section d-flex align-items-center decoration-wrap clearfix" data-background="{% static 'images/bg_1.jpeg' %}">
+				<div class="container text-center">
+					<h1 class="page-title mb-3">Search &amp; Appointment</h1>
+				</div>
+
+				<span class="decoration-image pill-image-1">
+					<img src="{% static 'picture/pill_1.jpeg' %}" alt="pill_image_not_found">
+				</span>
+	</section>
+	<div class="row">
+	<div class="col-md-8">
+	
+	<section class="shop-section sec-ptb-100 pb-0 decoration-wrap clearfix">
+	
+	
+    <div class="container-fluid">
+{#    <form>#}
+{#    <div class="row align-items-center g-3">#}
+{#        <div class="col-auto">#}
+{#            <label class="visually-hidden" for="Date">Date</label>#}
+{#            <select class="form-select">#}
+{#				<option value="1">Monday</option>#}
+{#				<option value="2">Tuesday</option>#}
+{#				<option value="3">Wednesday</option>#}
+{#				<option value="4">Thursday</option>#}
+{#				<option value="5">Friday</option>#}
+{#				<option value="6">Saturday</option>#}
+{#				<option value="7">Sunday</option>#}
+{#			</select>#}
+{#        </div>#}
+{#		<div class="col-auto">#}
+{#            <label class="visually-hidden" for="Time">TimePeriod</label>#}
+{#            <select class="form-select">#}
+{#				<option value="1">9:00-10:00</option>#}
+{#				<option value="2">10:00-11:00</option>#}
+{#				<option value="3">11:00-12:00</option>#}
+{#				<option value="4">2:00-3:00</option>#}
+{#				<option value="5">3:00-4:00</option>#}
+{#				<option value="6">4:00-5:00</option>#}
+{#			</select>#}
+{#        </div>#}
+{#        <div class="col-auto">#}
+{#            <label class="visually-hidden" for="Type">Type</label>#}
+{#            <select class="form-select">#}
+{#				<option value="1">Respiratory System</option>#}
+{#				<option value="2">Cardiovascular Disease</option>#}
+{#				<option value="3">Gastroenterology Department</option>#}
+{#				<option value="4">Dermopathy</option>#}
+{#				<option value="5">Nervous System Disease</option>#}
+{#				<option value="6">Oncology Department</option>#}
+{#				<option value="7">Sensory Organ</option>#}
+{#			</select>#}
+{#        </div>#}
+{#        <div class="col-auto">#}
+{#            <button type="submit" class="btn btn-primary btn-sm">Search</button>#}
+{#        </div>#}
+{#    </div>#}
+{#	</form>#}
+	<div class="content-item">
+	<p> Ps:Online appointments can only be made one week in advance for next week's pharmacist</p><hr></div>
+	<div class="box-body table-responsive no-padding">
+        <table class="table table-hover">
+            <tr>
+                <th>Apothecary Name</th>
+                <th>Appointment Date</th>
+                <th>Appointment Period</th>
+                <th>Skilled Field</th>
+                <th>Appointment</th>
+            </tr>
+			{% for up in User_Appointment %}
+			<tr>
+				<td>{{up.a_Name}}</td>
+				<td>{{up.a_Date}}</td>
+				<td>{{up.a_Period}}</td>
+				<td>{{up.a_Skill}}</td>
+				<td>{{up.a_Appointment}}</td>
+				
+			</tr>
+			{% endfor %}
+		</table>	
+	</div>
+	</section>
+	</div>
+	<div class="col-md-4">
+{#	<section class="shop-section sec-ptb-100 pb-0 decoration-wrap clearfix">#}
+{#	<div class="widget recent-post ul-li-block">#}
+{#		<h3 class="widget-title">Doctors Information</h3>#}
+{#			<ul class="clearfix">#}
+{#				<li>#}
+{#			<div class="blog-small clearfix">									#}
+{#			<a href="blog-details.html" class="item-image">#}
+{#				<img src="static/picture/img_1.jpg" alt="image_not_found"></a>#}
+{#			<div class="item-content">#}
+{#				<h4 class="item-title">#}
+{#				<a href="blog-details.html">#}
+{#				Let food be thy medicine and medicine be thy food.</a></h4>#}
+{#				<span class="post-date">22 May 2020 </span></div>#}
+{#				</div>	</li>															#}
+{#				<li>#}
+{#				<div class="blog-small clearfix">#}
+{#					<a href="blog-details.html" class="item-image">#}
+{#					<img src="static/picture/img_2.jpg" alt="image_not_found">#}
+{#												</a>#}
+{#					<div class="item-content">#}
+{#					<h4 class="item-title">#}
+{#					<a href="blog-details.html">#}
+{#						Always laugh when you can, it is cheap medicine.#}
+{#					</a>#}
+{#					</h4>									#}
+{#					<span class="post-date">28 May 2020 </span>#}
+{#												</div>#}
+{#											</div>#}
+{#										</li>																#}
+{#					<li>#}
+{#					<div class="blog-small clearfix">#}
+{#					<a href="blog-details.html" class="item-image">#}
+{#						<img src="static/picture/img_3.jpg" alt="image_not_found">#}
+{#					</a>#}
+{#					<div class="item-content">#}
+{#					<h4 class="item-title">#}
+{#					<a href="blog-details.html">#}
+{#					The art of medicine consists of amusing the patient while nature cures the disease.#}
+{#					</a>#}
+{#					</h4>#}
+{#					<span class="post-date">28 May 2020 </span>#}
+{#					</div>#}
+{#				</div>#}
+{#			</li>#}
+{#					<li>#}
+{#						<div class="blog-small clearfix">#}
+{#							<a href="blog-details.html" class="item-image">#}
+{#							<img src="static/picture/img_4.jpg" alt="image_not_found">#}
+{#							</a>#}
+{#						<div class="item-content">#}
+{#						<h4 class="item-title">#}
+{#						<a href="blog-details.html">#}
+{#							Wherever the art of Medicine is loved, there is also a love.#}
+{#								</a>	</h4>#}
+{#								<span class="post-date">28 May 2020 </span>#}
+{#												</div>#}
+{#											</div>#}
+{#										</li>#}
+{#				</ul>#}
+{#		</div></section>#}
+	</div>
+</div>
+</main>
+
+<footer id="footer-section" class="footer-section sec-ptb-100 pb-0 bg-gray clearfix">
+			<div class="container">
+
+				<div class="widget-area mb-60 clearfix">
+					<div class="row justify-content-lg-between justify-content-md-center justify-content-md-center">
+
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+							<div class="about-content">
+								<div class="brand-logo mb-4 clearfix">
+									<a href="index.html" class="brand-link">
+										<img src="{% static 'picture/medicia_1.jpeg' %}" alt="logo_not_found">
+									</a>
+								</div>
+								<p class="mb-30">
+									Medicia is an online medical service and
+									medicinewooCommerce theme for your ultimate
+									online store and medical service.
+								</p>
+								<div class="social-icon-circle ul-li clearfix">
+									<ul class="clearfix">
+										<li><a href="#!"><i class="lab la-facebook-f"></i></a></li>
+										<li><a href="#!"><i class="lab la-twitter"></i></a></li>
+										<li><a href="#!"><i class="lab la-instagram"></i></a></li>
+										<li><a href="#!"><i class="lab la-pinterest-p"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+							<div class="useful-links ul-li-block clearfix">
+								<h3 class="widget-title">Services</h3>
+								<ul class="clearfix">
+									<li><a href="{% url 'Shop' %}">Medicines Inquire</a></li>
+									<li><a href="{% url 'OnlineInquiry' %}">Consult &amp; Appointment</a></li>
+									<li><a href="{% url 'Shop' %}">Medicines Purchase</a></li>
+									<li><a href="#!">Personal Information</a></li>
+									<li><a href="#!">Doctors' Blogs</a></li>
+									
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+							<div class="useful-links ul-li-block clearfix">
+								<h3 class="widget-title">Professional Team</h3>
+								<ul class="clearfix">
+									<li><a href="#!">Cai Yiling</a></li>
+									<li><a href="#!">Shi Yiqing</a></li>
+									<li><a href="#!">Hou Ailing</a></li>
+									<li><a href="#!">Wang Ruoxin</a></li>
+									
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+							<div class="payment-cards ul-li mb-30 clearfix">
+								<h3 class="widget-title">Payments</h3>
+								<p class="mb-3">Secure Payments</p>
+								<ul class="mb-3 clearfix">
+									<li><a href="#!"><img src="{% static 'picture/card_1.jpeg' %}" alt="_not_found"></a></li>
+									<li><a href="#!"><img src="{% static 'picture/card_2.jpeg' %}" alt="_not_found"></a></li>
+									<li><a href="#!"><img src="{% static 'picture/card_3.jpeg' %}" alt="_not_found"></a></li>
+									<li><a href="#!"><img src="{% static 'picture/card_4.jpeg' %}" alt="_not_found"></a></li>
+									<li><a href="#!"><img src="{% static 'picture/card_5.jpeg' %}" alt="_not_found"></a></li>
+								</ul>
+								<p class="mb-0">Powred by <a href="#!">stripe</a></p>
+							</div>
+							<div class="btns-group ul-li-block">
+								<ul class="clearfix">
+									<li>
+										<a href="#!" class="store-btn bg-royal-blue">
+											<span class="icon-wrap">
+												<i class="lab la-apple"></i>
+											</span>
+											<span class="content-wrap">
+												<small>available on</small>
+												<strong>Apple Store</strong>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#!" class="store-btn bg-default-black">
+											<span class="icon-wrap">
+												<i class="lab la-google-play"></i>
+											</span>
+											<span class="content-wrap">
+												<small>available on</small>
+												<strong>Google Play</strong>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="footer-bottom text-center border-top clearfix">
+					<p class="mb-0">Thank you for your visting our CSHW Medicia</p>
+				</div>
+
+			</div>
+		</footer>
+		<!-- footer-section - end
+		================================================== -->
+
+		
+		<!-- jquery include -->
+		<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+		<script src="{% static 'js/jquery-ui.js' %}"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'js/owl.carousel2.thumbs.min.js' %}"></script>
+		<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+		<script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+		<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+		<script src="{% static 'js/countdown.js' %}"></script>
+
+		<!-- google map - jquery include -->
+		<script src="{% static 'js/4a3c1aef1b7a4fbf86e20ec6f99c2fdb.js' %}"></script>
+		<script src="{% static 'js/gmaps.min.js' %}"></script>
+
+		<!-- mobile menu - jquery include -->
+		<script src="{% static 'js/mcustomscrollbar.js' %}"></script>
+
+		<!-- custom - jquery include -->
+		<script src="{% static 'js/custom.js' %}"></script>
+
+
+	</body>
+</html>

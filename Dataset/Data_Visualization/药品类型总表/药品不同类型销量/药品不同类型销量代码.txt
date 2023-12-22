@@ -1,0 +1,22 @@
+import pyecharts.options as opts
+from pyecharts.charts import Line
+
+csv_file = "typeDrug.csv"
+csv_data = pd.read_csv(csv_file, low_memory = False)#防止弹出警告
+csv_df = pd.DataFrame(csv_data)
+d_sale = []
+d_type = ['家庭常备','皮肤用药','肠胃用药','呼吸系统类','五官用药','男性用药','妇科用药','儿科用药','维生素及营养类','心脑血管类','肝胆胰用药','肾病','内分泌失常','神经/精神','肿瘤科','风湿免疫科','抗寄生虫类','抗结核及麻风类','性病用药']
+for i in d_type:
+    d = csv_df[csv_df['type'] == i]
+    d_sale_sum = d.sale.sum()
+    d_sale.append(str(d_sale_sum))
+
+line = (
+    Line()
+    .add_xaxis(d_type)
+    .add_yaxis(series_name="drug sale",y_axis=d_sale,areastyle_opts=opts.AreaStyleOpts(opacity=0.5))
+    .set_global_opts(
+        xaxis_opts=opts.AxisOpts(name_rotate=60,axislabel_opts={"rotate":45}),
+        title_opts=opts.TitleOpts(title='Drug Sales'))
+)
+line.render('DrugSale.html')

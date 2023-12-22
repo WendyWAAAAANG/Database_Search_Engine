@@ -1,0 +1,129 @@
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="ciewport" content="width=device-width, initial-sale=1">
+    <title>CSHW Medicine</title>
+    <!-- include the css file of bootstrap -->
+    <link rel="stylesheet"  href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="posicol.css"/>
+</head>
+<body>
+{% load static %}
+	<nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+		<a href="" class="navbar-brand">
+			<i class="fa fa-heartbeat"> </i>
+				CSHW<b>Medicia</b></a>
+        <a href="" class="navbar-brand"></a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="{% url 'demo' %}" class="nav-link">HomePage</a>
+                </li>
+				<li class="nav-item">
+                    <a href="{% url 'Shop' %}" class="nav-link">Shop</a>
+                </li>
+				<li class="nav-item">
+                    <a href="{% url 'OnlineInquiry' %}" class="nav-link">Online Inquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link"></a>
+                </li>
+                
+            </ul>
+			
+            
+			</div>
+		</div>
+	</nav>
+
+{% load static %}
+<style>
+	.bg{background:url({% static 'bg_1.jpeg' %}) no-repeat top;
+		background-size :cover;}
+</style>
+<div class="row bg">
+<div class="container">
+<p> </p>
+<div class="col-md-4 bg-light">
+    <h2 class="text-center">Log<b class="text-warning">in</b></h2><hr>
+    <form method = 'post' enctype="multipart/form-data">
+    {{userform.as_p}}
+    {% csrf_token %}
+        <p class="text-muted"> &nbsp "User" or "Apothecary"</p>
+	<div class="mb-1">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkRemember">
+            <label class="form-check-label" for="checkRemember">Remember me</label>
+        </div>
+    </div>
+  </fieldset>
+<input type="submit" value = "Login" />
+        <div class="modal-footer">
+		<p><a href=""> Forgot Password?</a> &nbsp &nbsp
+		<p>Don't have account?<a href="{% url 'SigninPage' %}"> Register</a></p>
+</div>
+</form>
+{#<form method='post' action="{% url 'LoginPage' %}">#}
+{#	<h2 class="text-center">Log<b class="text-warning">in</b></h2><hr>#}
+{#    <div class="mb-2">#}
+{#        <label class="form-label" for="inputUsername">Username</label>#}
+{#        <input type="text" class="form-control" id="inputusername" placeholder="UserName" value="username" required>#}
+{#    </div>#}
+{#    <div class="mb-2">#}
+{#        <label class="form-label" for="inputPassword">Password</label>#}
+{#        <input type="password" class="form-control" id="inputPassword" value="password" placeholder="Password" required>#}
+{#        <div class="text-muted"> &nbsp Must be 8-20 characters long.</div>#}
+{#    </div>#}
+{#     <div class="mb-2">#}
+{#        <label class="form-label" for="inputemail">email</label>#}
+{#        <input type="text" class="form-control" id="inputemail" placeholder="Email" value="email" required>#}
+{#    </div>#}
+
+{##}
+{#  <div class="form-group row">#}
+{#    <div class="col-sm-10" style="text-align:center">#}
+{#      <button type="submit" class="btn btn-primary">Sign in</button>#}
+{#  </div></div>#}
+{#  <div class="modal-footer">#}
+{#		<p><a href=""> Forgot Password?</a> &nbsp &nbsp#}
+{#		<p>Don't have account?<a href="{% url 'SigninPage' %}"> Register</a></p>#}
+{#</div>#}
+{#  </div>#}
+{#</form>#}
+</div>
+</div>
+</div>
+{% load static %}
+<!-- JavaScript for disabling form submissions if there are invalid fields -->
+    <script>
+        // Self-executing function
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+<!-- include jquery.js and popper.js -->
+    <script src="{% static 'jquery/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'popper/popper-1.14.4.js' %}"></script>    
+    <!-- import bootstrap js -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>

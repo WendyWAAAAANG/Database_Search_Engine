@@ -1,0 +1,2120 @@
+{% extends 'MyTemp/Shop/Shop.html' %}
+{% load static %}
+
+{% block body %}
+<script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+     <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+     <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+{#     <script type="text/javascript" src="https://cdn.kesci.com/lib/pyecharts_assets/echarts.min.js"></script>#}
+    <div class="content-item">
+	<h3>Sales Analysis of different Drugs</h3>
+	</div>
+<div id="f8c86df8cc394731b73c7cdfbc4b5b3a" class="chart-container" style="width:900px; height:500px;"></div>
+
+    <script>
+        var chart_f8c86df8cc394731b73c7cdfbc4b5b3a = echarts.init(
+            document.getElementById('f8c86df8cc394731b73c7cdfbc4b5b3a'), 'white', {renderer: 'canvas'});
+        var option_f8c86df8cc394731b73c7cdfbc4b5b3a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "drug sale",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u5bb6\u5ead\u5e38\u5907",
+                    "97592"
+                ],
+                [
+                    "\u76ae\u80a4\u7528\u836f",
+                    "67448"
+                ],
+                [
+                    "\u80a0\u80c3\u7528\u836f",
+                    "71886"
+                ],
+                [
+                    "\u547c\u5438\u7cfb\u7edf\u7c7b",
+                    "111347"
+                ],
+                [
+                    "\u4e94\u5b98\u7528\u836f",
+                    "63404"
+                ],
+                [
+                    "\u7537\u6027\u7528\u836f",
+                    "11168"
+                ],
+                [
+                    "\u5987\u79d1\u7528\u836f",
+                    "45938"
+                ],
+                [
+                    "\u513f\u79d1\u7528\u836f",
+                    "17496"
+                ],
+                [
+                    "\u7ef4\u751f\u7d20\u53ca\u8425\u517b\u7c7b",
+                    "29503"
+                ],
+                [
+                    "\u5fc3\u8111\u8840\u7ba1\u7c7b",
+                    "69261"
+                ],
+                [
+                    "\u809d\u80c6\u80f0\u7528\u836f",
+                    "18366"
+                ],
+                [
+                    "\u80be\u75c5",
+                    "14547"
+                ],
+                [
+                    "\u5185\u5206\u6ccc\u5931\u5e38",
+                    "15775"
+                ],
+                [
+                    "\u795e\u7ecf/\u7cbe\u795e",
+                    "18637"
+                ],
+                [
+                    "\u80bf\u7624\u79d1",
+                    "7943"
+                ],
+                [
+                    "\u98ce\u6e7f\u514d\u75ab\u79d1",
+                    "19579"
+                ],
+                [
+                    "\u6297\u5bc4\u751f\u866b\u7c7b",
+                    "5115"
+                ],
+                [
+                    "\u6297\u7ed3\u6838\u53ca\u9ebb\u98ce\u7c7b",
+                    "4946"
+                ],
+                [
+                    "\u6027\u75c5\u7528\u836f",
+                    "17590"
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.5
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "drug sale"
+            ],
+            "selected": {
+                "drug sale": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "nameRotate": 60,
+            "gridIndex": 0,
+            "axisLabel": {
+                "rotate": 45
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5bb6\u5ead\u5e38\u5907",
+                "\u76ae\u80a4\u7528\u836f",
+                "\u80a0\u80c3\u7528\u836f",
+                "\u547c\u5438\u7cfb\u7edf\u7c7b",
+                "\u4e94\u5b98\u7528\u836f",
+                "\u7537\u6027\u7528\u836f",
+                "\u5987\u79d1\u7528\u836f",
+                "\u513f\u79d1\u7528\u836f",
+                "\u7ef4\u751f\u7d20\u53ca\u8425\u517b\u7c7b",
+                "\u5fc3\u8111\u8840\u7ba1\u7c7b",
+                "\u809d\u80c6\u80f0\u7528\u836f",
+                "\u80be\u75c5",
+                "\u5185\u5206\u6ccc\u5931\u5e38",
+                "\u795e\u7ecf/\u7cbe\u795e",
+                "\u80bf\u7624\u79d1",
+                "\u98ce\u6e7f\u514d\u75ab\u79d1",
+                "\u6297\u5bc4\u751f\u866b\u7c7b",
+                "\u6297\u7ed3\u6838\u53ca\u9ebb\u98ce\u7c7b",
+                "\u6027\u75c5\u7528\u836f"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "Drug Sales",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_f8c86df8cc394731b73c7cdfbc4b5b3a.setOption(option_f8c86df8cc394731b73c7cdfbc4b5b3a);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold__Family Standing</h3>
+	</div>
+    <div id="ffb0e46dd59a4f08a9ae60319d3c91ac" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_ffb0e46dd59a4f08a9ae60319d3c91ac = echarts.init(
+            document.getElementById('ffb0e46dd59a4f08a9ae60319d3c91ac'), 'white', {renderer: 'canvas'});
+        var option_ffb0e46dd59a4f08a9ae60319d3c91ac = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "7607",
+                    "value": "96"
+                },
+                {
+                    "name": "7544",
+                    "value": "91"
+                },
+                {
+                    "name": "8305",
+                    "value": "91"
+                },
+                {
+                    "name": "7574",
+                    "value": "87"
+                },
+                {
+                    "name": "7489",
+                    "value": "87"
+                },
+                {
+                    "name": "8032",
+                    "value": "40"
+                },
+                {
+                    "name": "8889",
+                    "value": "34"
+                },
+                {
+                    "name": "8394",
+                    "value": "29"
+                },
+                {
+                    "name": "7717",
+                    "value": "21"
+                },
+                {
+                    "name": "7614",
+                    "value": "3"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "7607",
+                "7544",
+                "8305",
+                "7574",
+                "7489",
+                "8032",
+                "8889",
+                "8394",
+                "7717",
+                "7614"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_ffb0e46dd59a4f08a9ae60319d3c91ac.setOption(option_ffb0e46dd59a4f08a9ae60319d3c91ac);
+    </script>
+
+    <div class="content-item">
+	<h3>Sales Analysis of different Drugs_Dermatologic</h3>
+	</div>
+    <div id="e8abc67a34334e08bb3b0c8ad377e4fc" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_e8abc67a34334e08bb3b0c8ad377e4fc = echarts.init(
+            document.getElementById('e8abc67a34334e08bb3b0c8ad377e4fc'), 'white', {renderer: 'canvas'});
+        var option_e8abc67a34334e08bb3b0c8ad377e4fc = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "9660",
+                    "value": "100"
+                },
+                {
+                    "name": "9266",
+                    "value": "99"
+                },
+                {
+                    "name": "9607",
+                    "value": "90"
+                },
+                {
+                    "name": "10195",
+                    "value": "83"
+                },
+                {
+                    "name": "9224",
+                    "value": "63"
+                },
+                {
+                    "name": "9171",
+                    "value": "52"
+                },
+                {
+                    "name": "9815",
+                    "value": "48"
+                },
+                {
+                    "name": "10370",
+                    "value": "39"
+                },
+                {
+                    "name": "10205",
+                    "value": "29"
+                },
+                {
+                    "name": "9366",
+                    "value": "7"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "9660",
+                "9266",
+                "9607",
+                "10195",
+                "9224",
+                "9171",
+                "9815",
+                "10370",
+                "10205",
+                "9366"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_e8abc67a34334e08bb3b0c8ad377e4fc.setOption(option_e8abc67a34334e08bb3b0c8ad377e4fc);
+    </script>
+{#    <div class="content-item">#}
+{#	<h3>Sales Analysis of different Drugs_Intestines And Stomach Medicine</h3>#}
+{#	</div>#}
+{#    <div id="4cf9291bf83d4111bb8f8da105c56798" class="chart-container" style="width:900px; height:500px;"></div>#}
+{#    <script>#}
+{#        var chart_4cf9291bf83d4111bb8f8da105c56798 = echarts.init(#}
+{#            document.getElementById('4cf9291bf83d4111bb8f8da105c56798'), 'white', {renderer: 'canvas'});#}
+{#        var option_4cf9291bf83d4111bb8f8da105c56798 = {#}
+{#    "animation": true,#}
+{#    "animationThreshold": 2000,#}
+{#    "animationDuration": 1000,#}
+{#    "animationEasing": "cubicOut",#}
+{#    "animationDelay": 0,#}
+{#    "animationDurationUpdate": 300,#}
+{#    "animationEasingUpdate": "cubicOut",#}
+{#    "animationDelayUpdate": 0,#}
+{#    "color": [#}
+{#        "#c23531",#}
+{#        "#2f4554",#}
+{#        "#61a0a8",#}
+{#        "#d48265",#}
+{#        "#749f83",#}
+{#        "#ca8622",#}
+{#        "#bda29a",#}
+{#        "#6e7074",#}
+{#        "#546570",#}
+{#        "#c4ccd3",#}
+{#        "#f05b72",#}
+{#        "#ef5b9c",#}
+{#        "#f47920",#}
+{#        "#905a3d",#}
+{#        "#fab27b",#}
+{#        "#2a5caa",#}
+{#        "#444693",#}
+{#        "#726930",#}
+{#        "#b2d235",#}
+{#        "#6d8346",#}
+{#        "#ac6767",#}
+{#        "#1d953f",#}
+{#        "#6950a1",#}
+{#        "#918597"#}
+{#    ],#}
+{#    "series": [#}
+{#        {#}
+{#            "type": "pie",#}
+{#            "clockwise": true,#}
+{#            "data": [#}
+{#                {#}
+{#                    "name": "11620",#}
+{#                    "value": "84"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11684",#}
+{#                    "value": "76"#}
+{#                },#}
+{#                {#}
+{#                    "name": "10834",#}
+{#                    "value": "68"#}
+{#                },#}
+{#                {#}
+{#                    "name": "10699",#}
+{#                    "value": "56"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11306",#}
+{#                    "value": "35"#}
+{#                },#}
+{#                {#}
+{#                    "name": "10622",#}
+{#                    "value": "35"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11305",#}
+{#                    "value": "30"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11062",#}
+{#                    "value": "18"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11714",#}
+{#                    "value": "13"#}
+{#                },#}
+{#                {#}
+{#                    "name": "11481",#}
+{#                    "value": "10"#}
+{#                }#}
+{#            ],#}
+{#            "radius": [#}
+{#                "30%",#}
+{#                "75%"#}
+{#            ],#}
+{#            "center": [#}
+{#                "50%",#}
+{#                "50%"#}
+{#            ],#}
+{#            "roseType": "radius",#}
+{#            "label": {#}
+{#                "show": true,#}
+{#                "position": "top",#}
+{#                "margin": 8,#}
+{#                "formatter": "{b}: {d}%"#}
+{#            },#}
+{#            "rippleEffect": {#}
+{#                "show": true,#}
+{#                "brushType": "stroke",#}
+{#                "scale": 2.5,#}
+{#                "period": 4#}
+{#            }#}
+{#        }#}
+{#    ],#}
+{#    "legend": [#}
+{#        {#}
+{#            "data": [#}
+{#                "11620",#}
+{#                "11684",#}
+{#                "10834",#}
+{#                "10699",#}
+{#                "11306",#}
+{#                "10622",#}
+{#                "11305",#}
+{#                "11062",#}
+{#                "11714",#}
+{#                "11481"#}
+{#            ],#}
+{#            "selected": {},#}
+{#            "show": true,#}
+{#            "padding": 5,#}
+{#            "itemGap": 10,#}
+{#            "itemWidth": 25,#}
+{#            "itemHeight": 14#}
+{#        }#}
+{#    ],#}
+{#    "tooltip": {#}
+{#        "show": true,#}
+{#        "trigger": "item",#}
+{#        "triggerOn": "mousemove|click",#}
+{#        "axisPointer": {#}
+{#            "type": "line"#}
+{#        },#}
+{#        "showContent": true,#}
+{#        "alwaysShowContent": false,#}
+{#        "showDelay": 0,#}
+{#        "hideDelay": 100,#}
+{#        "textStyle": {#}
+{#            "fontSize": 14#}
+{#        },#}
+{#        "borderWidth": 0,#}
+{#        "padding": 5#}
+{#    },#}
+{#    "title": [#}
+{#        {#}
+{#            "text": "PF",#}
+{#            "subtext": "sale&number",#}
+{#            "padding": 5,#}
+{#            "itemGap": 10#}
+{#        }#}
+{#    ]#}
+{#};#}
+{#        chart_4cf9291bf83d4111bb8f8da105c56798.setOption(option_4cf9291bf83d4111bb8f8da105c56798);#}
+{#    </script>#}
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Taurus Medicinemn</h3>
+	</div>
+    <div id="327349d85fde4ea2be05571fcd3e7268" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_327349d85fde4ea2be05571fcd3e7268 = echarts.init(
+            document.getElementById('327349d85fde4ea2be05571fcd3e7268'), 'white', {renderer: 'canvas'});
+        var option_327349d85fde4ea2be05571fcd3e7268 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "4518",
+                    "value": "93"
+                },
+                {
+                    "name": "4779",
+                    "value": "91"
+                },
+                {
+                    "name": "4644",
+                    "value": "87"
+                },
+                {
+                    "name": "5122",
+                    "value": "62"
+                },
+                {
+                    "name": "5195",
+                    "value": "60"
+                },
+                {
+                    "name": "5501",
+                    "value": "58"
+                },
+                {
+                    "name": "4761",
+                    "value": "44"
+                },
+                {
+                    "name": "4832",
+                    "value": "37"
+                },
+                {
+                    "name": "4745",
+                    "value": "33"
+                },
+                {
+                    "name": "5321",
+                    "value": "12"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "4518",
+                "4779",
+                "4644",
+                "5122",
+                "5195",
+                "5501",
+                "4761",
+                "4832",
+                "4745",
+                "5321"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_327349d85fde4ea2be05571fcd3e7268.setOption(option_327349d85fde4ea2be05571fcd3e7268);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Men Medicine</h3>
+	</div>
+     <div id="49bf5cd1081a4f7a9eea1c2d1608b1e9" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_49bf5cd1081a4f7a9eea1c2d1608b1e9 = echarts.init(
+            document.getElementById('49bf5cd1081a4f7a9eea1c2d1608b1e9'), 'white', {renderer: 'canvas'});
+        var option_49bf5cd1081a4f7a9eea1c2d1608b1e9 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "5732",
+                    "value": "92"
+                },
+                {
+                    "name": "5817",
+                    "value": "91"
+                },
+                {
+                    "name": "5694",
+                    "value": "86"
+                },
+                {
+                    "name": "5852",
+                    "value": "85"
+                },
+                {
+                    "name": "5708",
+                    "value": "63"
+                },
+                {
+                    "name": "5731",
+                    "value": "42"
+                },
+                {
+                    "name": "5703",
+                    "value": "41"
+                },
+                {
+                    "name": "5702",
+                    "value": "15"
+                },
+                {
+                    "name": "5832",
+                    "value": "7"
+                },
+                {
+                    "name": "5775",
+                    "value": "1"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "5732",
+                "5817",
+                "5694",
+                "5852",
+                "5708",
+                "5731",
+                "5703",
+                "5702",
+                "5832",
+                "5775"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_49bf5cd1081a4f7a9eea1c2d1608b1e9.setOption(option_49bf5cd1081a4f7a9eea1c2d1608b1e9);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Gynaecology Medicine</h3>
+	</div>
+    <div id="106deef18af849be9334d2dfaf8dd726" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_106deef18af849be9334d2dfaf8dd726 = echarts.init(
+            document.getElementById('106deef18af849be9334d2dfaf8dd726'), 'white', {renderer: 'canvas'});
+        var option_106deef18af849be9334d2dfaf8dd726 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "6151",
+                    "value": "86"
+                },
+                {
+                    "name": "6136",
+                    "value": "85"
+                },
+                {
+                    "name": "6609",
+                    "value": "72"
+                },
+                {
+                    "name": "6434",
+                    "value": "70"
+                },
+                {
+                    "name": "6772",
+                    "value": "68"
+                },
+                {
+                    "name": "6089",
+                    "value": "60"
+                },
+                {
+                    "name": "6608",
+                    "value": "32"
+                },
+                {
+                    "name": "5933",
+                    "value": "28"
+                },
+                {
+                    "name": "6799",
+                    "value": "23"
+                },
+                {
+                    "name": "6712",
+                    "value": "12"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "6151",
+                "6136",
+                "6609",
+                "6434",
+                "6772",
+                "6089",
+                "6608",
+                "5933",
+                "6799",
+                "6712"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_106deef18af849be9334d2dfaf8dd726.setOption(option_106deef18af849be9334d2dfaf8dd726);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Children's Medicine</h3>
+	</div>
+    <div id="0c3ac532e83142afad1426f2e148ea79" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_0c3ac532e83142afad1426f2e148ea79 = echarts.init(
+            document.getElementById('0c3ac532e83142afad1426f2e148ea79'), 'white', {renderer: 'canvas'});
+        var option_0c3ac532e83142afad1426f2e148ea79 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "6909",
+                    "value": "92"
+                },
+                {
+                    "name": "6905",
+                    "value": "84"
+                },
+                {
+                    "name": "7078",
+                    "value": "76"
+                },
+                {
+                    "name": "6941",
+                    "value": "73"
+                },
+                {
+                    "name": "7050",
+                    "value": "67"
+                },
+                {
+                    "name": "6977",
+                    "value": "53"
+                },
+                {
+                    "name": "6912",
+                    "value": "50"
+                },
+                {
+                    "name": "6894",
+                    "value": "42"
+                },
+                {
+                    "name": "6841",
+                    "value": "34"
+                },
+                {
+                    "name": "7145",
+                    "value": "9"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "6909",
+                "6905",
+                "7078",
+                "6941",
+                "7050",
+                "6977",
+                "6912",
+                "6894",
+                "6841",
+                "7145"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_0c3ac532e83142afad1426f2e148ea79.setOption(option_0c3ac532e83142afad1426f2e148ea79);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Nutritional Medicinumn</h3>
+	</div>
+        <div id="e8ecf7af074b413d8e8c26a87a6e6b92" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_e8ecf7af074b413d8e8c26a87a6e6b92 = echarts.init(
+            document.getElementById('e8ecf7af074b413d8e8c26a87a6e6b92'), 'white', {renderer: 'canvas'});
+        var option_e8ecf7af074b413d8e8c26a87a6e6b92 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "2042",
+                    "value": "92"
+                },
+                {
+                    "name": "2204",
+                    "value": "90"
+                },
+                {
+                    "name": "2284",
+                    "value": "89"
+                },
+                {
+                    "name": "1918",
+                    "value": "84"
+                },
+                {
+                    "name": "2106",
+                    "value": "75"
+                },
+                {
+                    "name": "1861",
+                    "value": "60"
+                },
+                {
+                    "name": "1806",
+                    "value": "40"
+                },
+                {
+                    "name": "2100",
+                    "value": "29"
+                },
+                {
+                    "name": "1984",
+                    "value": "16"
+                },
+                {
+                    "name": "1892",
+                    "value": "8"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2042",
+                "2204",
+                "2284",
+                "1918",
+                "2106",
+                "1861",
+                "1806",
+                "2100",
+                "1984",
+                "1892"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_e8ecf7af074b413d8e8c26a87a6e6b92.setOption(option_e8ecf7af074b413d8e8c26a87a6e6b92);
+    </script>
+    <div class="content-item">
+	<h3>Same Type of Drugs sold_Cardio-cerebrovascular Medicinen</h3>
+	</div>
+    <div id="687d728406854acfb28f29466a0fa020" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_687d728406854acfb28f29466a0fa020 = echarts.init(
+            document.getElementById('687d728406854acfb28f29466a0fa020'), 'white', {renderer: 'canvas'});
+        var option_687d728406854acfb28f29466a0fa020 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "3284",
+                    "value": "95"
+                },
+                {
+                    "name": "3443",
+                    "value": "80"
+                },
+                {
+                    "name": "2835",
+                    "value": "67"
+                },
+                {
+                    "name": "3444",
+                    "value": "53"
+                },
+                {
+                    "name": "3080",
+                    "value": "44"
+                },
+                {
+                    "name": "3310",
+                    "value": "35"
+                },
+                {
+                    "name": "2632",
+                    "value": "34"
+                },
+                {
+                    "name": "2735",
+                    "value": "18"
+                },
+                {
+                    "name": "2699",
+                    "value": "12"
+                },
+                {
+                    "name": "3161",
+                    "value": "3"
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {d}%"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "3284",
+                "3443",
+                "2835",
+                "3444",
+                "3080",
+                "3310",
+                "2632",
+                "2735",
+                "2699",
+                "3161"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "PF",
+            "subtext": "sale&number",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_687d728406854acfb28f29466a0fa020.setOption(option_687d728406854acfb28f29466a0fa020);
+    </script>
+    <div class="content-item">
+	<h3>Users are distributed by region in the country</h3>
+	</div>
+    <div id="d70d16fe3b264a6a8fb87e8b08249c52" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_d70d16fe3b264a6a8fb87e8b08249c52 = echarts.init(
+            document.getElementById('d70d16fe3b264a6a8fb87e8b08249c52'), 'white', {renderer: 'canvas'});
+        var option_d70d16fe3b264a6a8fb87e8b08249c52 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "User Distribution number",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "china",
+            "data": [
+                {
+                    "name": "\u9ed1\u9f99\u6c5f",
+                    "value": 2290
+                },
+                {
+                    "name": "\u53f0\u6e7e",
+                    "value": 741
+                },
+                {
+                    "name": "\u8fbd\u5b81",
+                    "value": 705
+                },
+                {
+                    "name": "\u4e91\u5357",
+                    "value": 261
+                },
+                {
+                    "name": "\u9752\u6d77",
+                    "value": 248
+                },
+                {
+                    "name": "\u9655\u897f",
+                    "value": 196
+                },
+                {
+                    "name": "\u8d35\u5dde",
+                    "value": 147
+                },
+                {
+                    "name": "\u6cb3\u5317",
+                    "value": 94
+                },
+                {
+                    "name": "\u6cb3\u5357",
+                    "value": 80
+                },
+                {
+                    "name": "\u5b89\u5fbd",
+                    "value": 74
+                },
+                {
+                    "name": "\u6d77\u5357",
+                    "value": 69
+                },
+                {
+                    "name": "\u7518\u8083",
+                    "value": 69
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 27
+                },
+                {
+                    "name": "\u5c71\u897f",
+                    "value": 27
+                },
+                {
+                    "name": "\u5409\u6797",
+                    "value": 25
+                },
+                {
+                    "name": "\u5c71\u4e1c",
+                    "value": 19
+                },
+                {
+                    "name": "\u798f\u5efa",
+                    "value": 17
+                },
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 17
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 7
+                },
+                {
+                    "name": "\u56db\u5ddd",
+                    "value": 7
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 6
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 4
+                },
+                {
+                    "name": "\u6e56\u5317",
+                    "value": 1
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "User Distribution number"
+            ],
+            "selected": {
+                "User Distribution number": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "User Distribution Chart",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 0,
+        "max": 50,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_d70d16fe3b264a6a8fb87e8b08249c52.setOption(option_d70d16fe3b264a6a8fb87e8b08249c52);
+    </script>
+    <div class="content-item">
+	<h3>Distribution of drugs in different inventory segments</h3>
+	</div>
+    <div id="1ebed718a86d4ce5ab2e4762fdc4c806" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_1ebed718a86d4ce5ab2e4762fdc4c806 = echarts.init(
+            document.getElementById('1ebed718a86d4ce5ab2e4762fdc4c806'), 'white', {renderer: 'canvas'});
+        var option_1ebed718a86d4ce5ab2e4762fdc4c806 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Number",
+            "legendHoverLink": true,
+            "data": [
+                2770,
+                2802,
+                2829,
+                2818,
+                2787
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Number"
+            ],
+            "selected": {
+                "Number": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "0-100",
+                "100-200",
+                "200-300",
+                "300-400",
+                "400-500"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "Drug Surplus",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_1ebed718a86d4ce5ab2e4762fdc4c806.setOption(option_1ebed718a86d4ce5ab2e4762fdc4c806);
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "MyAdmin/base.html" %}
+
+{% block main_body %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Account Management
+        <small>Background Information Management of Employee</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>HomePage</a></li>
+        <li class="active">Employee Management</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+                <h2 class="box-title">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true">
+                    Edit Information
+                    </span>
+                </h2>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal" action="{% url 'MyAdmin_emp_update' Employee.id %}" method="post">
+                {% csrf_token %}
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Employee Name:</label>
+
+                  <div class="col-sm-4">
+                      <label for="inputText1"></label><input type="text" name="name" value="{{ Employee.name }}" class="form-control" disabled readonly id="inputText1" placeholder="Name" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Division:</label>
+
+                  <div class="col-sm-4">
+                      <label for="inputText2"></label><input type="text" name="division" value="{{Employee.division}}" class="form-control" id="inputText2" placeholder="Division" />
+
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Tel:</label>
+
+                  <div class="col-sm-4">
+                      <label for="inputText3"></label><input type="text" name="tel" value="{{Employee.tel}}" class="form-control" id="inputText3" placeholder="Telephone" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3"  class="col-sm-2 control-label">Adding Time:</label>
+
+                  <div class="col-sm-4">
+                    <td width="15%">{{ Employee.create_at|date:'Y-m-d H:i:s' }}</td>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Editing Time:</label>
+
+                  <div class="col-sm-4">
+                    <td width="15%">{{ Employee.update_at|date:'Y-m-d H:i:s' }}</td>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Current Status:</label>
+                  <div class="controls">
+                    &nbsp; &nbsp;
+                      <label>
+                          <input type="radio" name="status" class="input-xlarge" value="1"
+                          {% if Employee.status == 1 %}checked{% endif %} />
+                      </label>Normal
+                     &nbsp; &nbsp;
+                      <label>
+                          <input type="radio" name="status" class="input-xlarge" value="2"
+                          {% if Employee.status == 2 %}checked{% endif %} />
+                      </label>Forbidden
+                     &nbsp; &nbsp;
+                      <label>
+                          <input type="radio" name="status" class="input-xlarge" value="6"
+                          {% if Employee.status == 6 %}checked{% endif %} />
+                      </label>Manager
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+                  <button type="submit" class="btn btn-primary">Save</button> &nbsp;
+                  <button type="reset" class="btn btn-default">Reset</button>
+                  <div class="col-sm-offset-2 col-sm-10"></div>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+{% endblock %}

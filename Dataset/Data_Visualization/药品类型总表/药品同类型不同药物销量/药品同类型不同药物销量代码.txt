@@ -1,0 +1,31 @@
+from pyecharts.charts import *
+from pyecharts.components import Table
+from pyecharts import options as opts
+from pyecharts.commons.utils import JsCode
+import random
+import datetime
+from pyecharts.globals import CurrentConfig
+import pandas as pd
+
+CurrentConfig.ONLINE_HOST = "https://cdn.kesci.com/lib/pyecharts_assets/"
+
+csv_file = "typeDrug.csv"
+csv_data = pd.read_csv(csv_file, low_memory = False)#防止弹出警告
+csv_df = pd.DataFrame(csv_data)
+d = 1
+d_type = ['家庭常备','皮肤用药','肠胃用药','呼吸系统类','五官用药','男性用药','妇科用药','儿科用药','维生素及营养类','心脑血管类','肝胆胰用药','肾病','内分泌失常','神经/精神','肿瘤科','风湿免疫科','抗寄生虫类','抗结核及麻风类','性病用药']
+for i in d_type:
+    select_drug_result = csv_df[csv_df['type'] == i]
+    select_drug_result = select_drug_result.sample(n=10,random_state=None,axis=0).sort_values(by='sale',ascending=False,axis=0)
+    x = list(map(str,select_drug_result['id']))
+    y = list(map(str,select_drug_result['sale']))
+    z = list(map(str,select_drug_result['number']))
+    pie = (Pie()
+          .add('',[list(z) for z in zip(x,y)],
+              radius=["30%","75%"],
+              rosetype="radius")
+          .set_global_opts(title_opts=opts.TitleOpts(title="PF", subtitle="sale&number"))
+          .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {d}%"))
+          )
+    pie.render("typeDrug"+str(d)+".html")
+    d += 1

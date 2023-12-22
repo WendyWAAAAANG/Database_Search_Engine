@@ -1,0 +1,108 @@
+{% extends "MyAdmin/base.html" %}
+
+
+{% block main_body %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Drug Management
+        <small>Backstage Management of Drug</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>HomePage</a></li>
+        <li class="active">Drug Management</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+                <h2 class="box-title"> 
+					<span class="glyphicon glyphicon-calendar" aria-hidden="true">
+					Add Info of Drug
+					</span>
+				</h2>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal" action="{% url 'MyAdmin_product_insert' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="box-body">
+{#                <div class="form-group">#}
+{#                  <label for="inputEmail3" class="col-sm-2 control-label">Drug Categories:</label>#}
+{#                  <div class="col-sm-4">#}
+{#                      <input type="text" name="dCategories" class="form-control" id="dCategories" />#}
+{#                  </div>#}
+{#                </div>#}
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Drug Name:</label>
+                  <div class="col-sm-4">
+                      <input type="text" name="dName" class="form-control" id="inputText1" />
+                  </div>
+                </div>                
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Effect:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dEffect" class="form-control" id="inputText1"  n/>
+                  </div>
+                </div>
+				
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Usage:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dUsage" class="form-control" id="inputText2" />
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Type:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dType" class="form-control" id="inputText3" />
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Sale Record:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dSale" class="form-control" id="inputText4" />
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Amount:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dNum" class="form-control" id="inputText5" />
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Price:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dPrice" class="form-control" id="inputText6" />
+                  </div>
+                </div>
+				<div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Status:</label>
+                  <div class="col-sm-4">
+                    <input type="text" name="dStatus" class="form-control" id="inputText7" placeholder="1:Normal; 2:Forbidden; 6:Manager; 9:Deleted"/>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <div class="col-sm-offset-2 col-sm-10"></div>
+                  <button type="submit" class="btn btn-primary">Submit</button> &nbsp; 
+                  <button type="submit" class="btn btn-default">Reset</button>
+                <div class="col-sm-offset-2 col-sm-10"></div>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+{% endblock %}
